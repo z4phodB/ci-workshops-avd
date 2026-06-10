@@ -185,7 +185,7 @@ port_channel_interfaces:
     enabled: true
     mode: trunk
     trunk:
-      allowed_vlan: '40'
+      allowed_vlan: none
 router_ospf:
   process_ids:
   - id: 100
@@ -239,17 +239,17 @@ vlan_interfaces:
     - MY_FABRIC
     tags:
     - DB
-- name: Vlan40
-  description: Forty
+- name: Vlan45
+  description: Forty-five
   shutdown: false
-  ip_address: 10.40.40.2/24
+  ip_address: 10.45.45.2/24
   ip_virtual_router_addresses:
-  - 10.40.40.1
+  - 10.45.45.1
   metadata:
     tenants:
     - MY_FABRIC
     tags:
-    - DMZ
+    - Guest
 vlan_internal_order:
   allocation: ascending
   range:
@@ -275,8 +275,8 @@ vlans:
   metadata:
     tenants:
     - MY_FABRIC
-- id: 40
-  name: Forty
+- id: 45
+  name: Forty-five
   metadata:
     tenants:
     - MY_FABRIC

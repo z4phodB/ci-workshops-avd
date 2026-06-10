@@ -134,7 +134,7 @@ port_channel_interfaces:
     enabled: true
     mode: trunk
     trunk:
-      allowed_vlan: '40'
+      allowed_vlan: none
 - name: Port-Channel4
   description: SERVER_s2-host2
   shutdown: false
@@ -176,11 +176,6 @@ vlans:
   metadata:
     tenants:
     - system
-- id: 40
-  name: Forty
-  metadata:
-    tenants:
-    - MY_FABRIC
 vrfs:
 - name: default
   ip_routing: false
